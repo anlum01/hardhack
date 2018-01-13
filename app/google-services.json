@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "114502595329",
+    "firebase_url": "https://hardhack2018-35975.firebaseio.com",
+    "project_id": "hardhack2018-35975",
+    "storage_bucket": "hardhack2018-35975.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114502595329:android:19721b24476241eb",
+        "android_client_info": {
+          "package_name": "com.example.lum.hardhack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114502595329-mq5b7rrpmg2g6f715f3avuhh35amapq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgd7G8pk2X4_qSCMXnUuikTEA9GEoUQp4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
