@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 long value = dataSnapshot.getValue(Long.class);
+                //int intesity = Integer.parseInt(value);
                 light1.setProgress((int) value);
             }
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 long value = dataSnapshot.getValue(Long.class);
+                //int intesity = Integer.parseInt(value);
                 light2.setProgress((int) value);
             }
 
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 long value = dataSnapshot.getValue(Long.class);
+                //int intesity = Integer.parseInt(value);
                 light3.setProgress((int) value);
             }
 
@@ -87,9 +90,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if (gesture == true) {
-                    mDatabase.child("light1").setValue(progressChangedValue);
-                    gesture = false;
+                if(gesture) {
+                    if (progressChangedValue >= 50) {
+                        mDatabase.child("light1").setValue(100);
+                        light1.setProgress(100);
+                    } else {
+                        mDatabase.child("light1").setValue(0);
+                        light1.setProgress(0);
+                    }
+                    gesture=false;
                 }
             }
         });
@@ -110,9 +119,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if (gesture == true) {
-                    mDatabase.child("light2").setValue(progressChangedValue);
-                    gesture = false;
+                if(gesture) {
+                    if (progressChangedValue >= 50) {
+                        mDatabase.child("light2").setValue(100);
+                        light2.setProgress(100);
+                    } else {
+                        mDatabase.child("light2").setValue(0);
+                        light2.setProgress(0);
+                    }
+                    gesture=false;
                 }
             }
         });
@@ -132,8 +147,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if (gesture == true) {
-                    mDatabase.child("light3").setValue(progressChangedValue);
+                if (gesture) {
+                    //mDatabase.child("light3").setValue(progressChangedValue);
+                    if(progressChangedValue>=50) {
+                        mDatabase.child("light3").setValue(100);
+                        light3.setProgress(100);
+                    } else{
+                        mDatabase.child("light3").setValue(0);
+                        light3.setProgress(0);
+                    }
                     gesture = false;
                 }
             }
