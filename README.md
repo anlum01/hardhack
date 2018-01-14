@@ -1,5 +1,7 @@
 # hardHack2018 1/12-1/13 Team 20 DoYouKnowTheWhey
   Created a prototype that is able to connect to a android app, firebase server and Dragonboard
+
+https://www.youtube.com/watch?feature=youtu.be&v=T1HvYEDW6Qk&app=desktop
 ## Team:
 ### Andrew Li
 ### Andy Lum
